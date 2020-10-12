@@ -9,13 +9,15 @@
 /* Begin PBXBuildFile section */
 		91E9119425304ABE00124C0E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91E9119325304ABE00124C0E /* AppDelegate.swift */; };
 		91E9119625304ABE00124C0E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91E9119525304ABE00124C0E /* SceneDelegate.swift */; };
-		91E9119825304ABE00124C0E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91E9119725304ABE00124C0E /* ViewController.swift */; };
 		91E9119B25304ABE00124C0E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 91E9119925304ABE00124C0E /* Main.storyboard */; };
 		91E9119E25304ABE00124C0E /* Obatur.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 91E9119C25304ABE00124C0E /* Obatur.xcdatamodeld */; };
 		91E911A025304ABF00124C0E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 91E9119F25304ABF00124C0E /* Assets.xcassets */; };
 		91E911A325304ABF00124C0E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 91E911A125304ABF00124C0E /* LaunchScreen.storyboard */; };
 		91E911AE25304ABF00124C0E /* ObaturTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91E911AD25304ABF00124C0E /* ObaturTests.swift */; };
 		91E911B925304ABF00124C0E /* ObaturUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91E911B825304ABF00124C0E /* ObaturUITests.swift */; };
+		96D3D0322533E4EB00435D7D /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96D3D0312533E4EB00435D7D /* NavigationController.swift */; };
+		96D3D0372533E55C00435D7D /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96D3D0362533E55C00435D7D /* CollectionViewController.swift */; };
+		96D3D03C2533E71400435D7D /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96D3D03B2533E71400435D7D /* CollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,7 +41,6 @@
 		91E9119025304ABE00124C0E /* Obatur.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Obatur.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		91E9119325304ABE00124C0E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		91E9119525304ABE00124C0E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		91E9119725304ABE00124C0E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		91E9119A25304ABE00124C0E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		91E9119D25304ABE00124C0E /* Obatur.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Obatur.xcdatamodel; sourceTree = "<group>"; };
 		91E9119F25304ABF00124C0E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -51,6 +52,9 @@
 		91E911B425304ABF00124C0E /* ObaturUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ObaturUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		91E911B825304ABF00124C0E /* ObaturUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObaturUITests.swift; sourceTree = "<group>"; };
 		91E911BA25304ABF00124C0E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		96D3D0312533E4EB00435D7D /* NavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
+		96D3D0362533E55C00435D7D /* CollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
+		96D3D03B2533E71400435D7D /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,8 +107,10 @@
 			children = (
 				91E9119325304ABE00124C0E /* AppDelegate.swift */,
 				91E9119525304ABE00124C0E /* SceneDelegate.swift */,
-				91E9119725304ABE00124C0E /* ViewController.swift */,
 				91E9119925304ABE00124C0E /* Main.storyboard */,
+				96D3D0312533E4EB00435D7D /* NavigationController.swift */,
+				96D3D0362533E55C00435D7D /* CollectionViewController.swift */,
+				96D3D03B2533E71400435D7D /* CollectionViewCell.swift */,
 				91E9119F25304ABF00124C0E /* Assets.xcassets */,
 				91E911A125304ABF00124C0E /* LaunchScreen.storyboard */,
 				91E911A425304ABF00124C0E /* Info.plist */,
@@ -262,9 +268,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				91E9119E25304ABE00124C0E /* Obatur.xcdatamodeld in Sources */,
-				91E9119825304ABE00124C0E /* ViewController.swift in Sources */,
+				96D3D0322533E4EB00435D7D /* NavigationController.swift in Sources */,
+				96D3D03C2533E71400435D7D /* CollectionViewCell.swift in Sources */,
 				91E9119425304ABE00124C0E /* AppDelegate.swift in Sources */,
 				91E9119625304ABE00124C0E /* SceneDelegate.swift in Sources */,
+				96D3D0372533E55C00435D7D /* CollectionViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
