@@ -14,6 +14,7 @@ class CollectionViewController: UICollectionViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        setupNavBar()
     }
     
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -36,4 +37,11 @@ class CollectionViewController: UICollectionViewController {
         print("Selected Country: \(dataSource[indexPath.row])")
     }
 
+    func setupNavBar() {
+        navigationController?.navigationBar.prefersLargeTitles =  true
+        
+        let searchController = UISearchController(searchResultsController: nil)
+        navigationItem.searchController = searchController
+        navigationItem.hidesSearchBarWhenScrolling = false
+    }
 }
