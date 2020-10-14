@@ -9,6 +9,14 @@ import UIKit
 
 class ListObatViewController: UIViewController {
     
+    
+    @IBOutlet weak var appName: UILabel!
+    @IBOutlet weak var dokterTxt: UILabel!
+    @IBOutlet weak var spesialisTxt: UILabel!
+    @IBOutlet weak var rumahSakitTxt: UILabel!
+    @IBOutlet weak var pasienIdTxt: UILabel!
+    @IBOutlet weak var namaPasienTxt: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupNavBar()
