@@ -16,6 +16,22 @@
 		91E911A325304ABF00124C0E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 91E911A125304ABF00124C0E /* LaunchScreen.storyboard */; };
 		91E911AE25304ABF00124C0E /* ObaturTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91E911AD25304ABF00124C0E /* ObaturTests.swift */; };
 		91E911B925304ABF00124C0E /* ObaturUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91E911B825304ABF00124C0E /* ObaturUITests.swift */; };
+		96CD3B592537869D00F0A7F0 /* Subcategories+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96CD3B492537869D00F0A7F0 /* Subcategories+CoreDataClass.swift */; };
+		96CD3B5A2537869D00F0A7F0 /* Subcategories+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96CD3B4A2537869D00F0A7F0 /* Subcategories+CoreDataProperties.swift */; };
+		96CD3B5B2537869D00F0A7F0 /* Doctors+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96CD3B4B2537869D00F0A7F0 /* Doctors+CoreDataClass.swift */; };
+		96CD3B5C2537869D00F0A7F0 /* Doctors+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96CD3B4C2537869D00F0A7F0 /* Doctors+CoreDataProperties.swift */; };
+		96CD3B5D2537869D00F0A7F0 /* Categories+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96CD3B4D2537869D00F0A7F0 /* Categories+CoreDataClass.swift */; };
+		96CD3B5E2537869D00F0A7F0 /* Categories+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96CD3B4E2537869D00F0A7F0 /* Categories+CoreDataProperties.swift */; };
+		96CD3B5F2537869D00F0A7F0 /* Specialties+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96CD3B4F2537869D00F0A7F0 /* Specialties+CoreDataClass.swift */; };
+		96CD3B602537869D00F0A7F0 /* Specialties+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96CD3B502537869D00F0A7F0 /* Specialties+CoreDataProperties.swift */; };
+		96CD3B612537869D00F0A7F0 /* Patients+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96CD3B512537869D00F0A7F0 /* Patients+CoreDataClass.swift */; };
+		96CD3B622537869D00F0A7F0 /* Patients+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96CD3B522537869D00F0A7F0 /* Patients+CoreDataProperties.swift */; };
+		96CD3B632537869D00F0A7F0 /* Prescriptions+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96CD3B532537869D00F0A7F0 /* Prescriptions+CoreDataClass.swift */; };
+		96CD3B642537869D00F0A7F0 /* Prescriptions+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96CD3B542537869D00F0A7F0 /* Prescriptions+CoreDataProperties.swift */; };
+		96CD3B652537869D00F0A7F0 /* Prescription_items+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96CD3B552537869D00F0A7F0 /* Prescription_items+CoreDataClass.swift */; };
+		96CD3B662537869D00F0A7F0 /* Prescription_items+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96CD3B562537869D00F0A7F0 /* Prescription_items+CoreDataProperties.swift */; };
+		96CD3B672537869D00F0A7F0 /* Medicines+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96CD3B572537869D00F0A7F0 /* Medicines+CoreDataClass.swift */; };
+		96CD3B682537869D00F0A7F0 /* Medicines+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96CD3B582537869D00F0A7F0 /* Medicines+CoreDataProperties.swift */; };
 		96D3D0322533E4EB00435D7D /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96D3D0312533E4EB00435D7D /* NavigationController.swift */; };
 /* End PBXBuildFile section */
 
@@ -52,6 +68,22 @@
 		91E911B425304ABF00124C0E /* ObaturUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ObaturUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		91E911B825304ABF00124C0E /* ObaturUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObaturUITests.swift; sourceTree = "<group>"; };
 		91E911BA25304ABF00124C0E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		96CD3B492537869D00F0A7F0 /* Subcategories+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Subcategories+CoreDataClass.swift"; sourceTree = "<group>"; };
+		96CD3B4A2537869D00F0A7F0 /* Subcategories+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Subcategories+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		96CD3B4B2537869D00F0A7F0 /* Doctors+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Doctors+CoreDataClass.swift"; sourceTree = "<group>"; };
+		96CD3B4C2537869D00F0A7F0 /* Doctors+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Doctors+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		96CD3B4D2537869D00F0A7F0 /* Categories+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Categories+CoreDataClass.swift"; sourceTree = "<group>"; };
+		96CD3B4E2537869D00F0A7F0 /* Categories+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Categories+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		96CD3B4F2537869D00F0A7F0 /* Specialties+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Specialties+CoreDataClass.swift"; sourceTree = "<group>"; };
+		96CD3B502537869D00F0A7F0 /* Specialties+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Specialties+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		96CD3B512537869D00F0A7F0 /* Patients+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Patients+CoreDataClass.swift"; sourceTree = "<group>"; };
+		96CD3B522537869D00F0A7F0 /* Patients+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Patients+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		96CD3B532537869D00F0A7F0 /* Prescriptions+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Prescriptions+CoreDataClass.swift"; sourceTree = "<group>"; };
+		96CD3B542537869D00F0A7F0 /* Prescriptions+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Prescriptions+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		96CD3B552537869D00F0A7F0 /* Prescription_items+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Prescription_items+CoreDataClass.swift"; sourceTree = "<group>"; };
+		96CD3B562537869D00F0A7F0 /* Prescription_items+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Prescription_items+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		96CD3B572537869D00F0A7F0 /* Medicines+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Medicines+CoreDataClass.swift"; sourceTree = "<group>"; };
+		96CD3B582537869D00F0A7F0 /* Medicines+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Medicines+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		96D3D0312533E4EB00435D7D /* NavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -103,6 +135,7 @@
 		91E9119225304ABE00124C0E /* Obatur */ = {
 			isa = PBXGroup;
 			children = (
+				96CD3B6C253786B800F0A7F0 /* Models */,
 				91E9119325304ABE00124C0E /* AppDelegate.swift */,
 				91E9119525304ABE00124C0E /* SceneDelegate.swift */,
 				91E9119925304ABE00124C0E /* Main.storyboard */,
@@ -132,6 +165,29 @@
 				91E911BA25304ABF00124C0E /* Info.plist */,
 			);
 			path = ObaturUITests;
+			sourceTree = "<group>";
+		};
+		96CD3B6C253786B800F0A7F0 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				96CD3B492537869D00F0A7F0 /* Subcategories+CoreDataClass.swift */,
+				96CD3B4A2537869D00F0A7F0 /* Subcategories+CoreDataProperties.swift */,
+				96CD3B4B2537869D00F0A7F0 /* Doctors+CoreDataClass.swift */,
+				96CD3B4C2537869D00F0A7F0 /* Doctors+CoreDataProperties.swift */,
+				96CD3B4D2537869D00F0A7F0 /* Categories+CoreDataClass.swift */,
+				96CD3B4E2537869D00F0A7F0 /* Categories+CoreDataProperties.swift */,
+				96CD3B4F2537869D00F0A7F0 /* Specialties+CoreDataClass.swift */,
+				96CD3B502537869D00F0A7F0 /* Specialties+CoreDataProperties.swift */,
+				96CD3B512537869D00F0A7F0 /* Patients+CoreDataClass.swift */,
+				96CD3B522537869D00F0A7F0 /* Patients+CoreDataProperties.swift */,
+				96CD3B532537869D00F0A7F0 /* Prescriptions+CoreDataClass.swift */,
+				96CD3B542537869D00F0A7F0 /* Prescriptions+CoreDataProperties.swift */,
+				96CD3B552537869D00F0A7F0 /* Prescription_items+CoreDataClass.swift */,
+				96CD3B562537869D00F0A7F0 /* Prescription_items+CoreDataProperties.swift */,
+				96CD3B572537869D00F0A7F0 /* Medicines+CoreDataClass.swift */,
+				96CD3B582537869D00F0A7F0 /* Medicines+CoreDataProperties.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -264,11 +320,27 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				96CD3B5B2537869D00F0A7F0 /* Doctors+CoreDataClass.swift in Sources */,
+				96CD3B5C2537869D00F0A7F0 /* Doctors+CoreDataProperties.swift in Sources */,
+				96CD3B592537869D00F0A7F0 /* Subcategories+CoreDataClass.swift in Sources */,
+				96CD3B602537869D00F0A7F0 /* Specialties+CoreDataProperties.swift in Sources */,
+				96CD3B5E2537869D00F0A7F0 /* Categories+CoreDataProperties.swift in Sources */,
 				91E9119E25304ABE00124C0E /* Obatur.xcdatamodeld in Sources */,
 				96D3D0322533E4EB00435D7D /* NavigationController.swift in Sources */,
+				96CD3B5D2537869D00F0A7F0 /* Categories+CoreDataClass.swift in Sources */,
 				91E9119425304ABE00124C0E /* AppDelegate.swift in Sources */,
+				96CD3B622537869D00F0A7F0 /* Patients+CoreDataProperties.swift in Sources */,
+				96CD3B652537869D00F0A7F0 /* Prescription_items+CoreDataClass.swift in Sources */,
+				96CD3B642537869D00F0A7F0 /* Prescriptions+CoreDataProperties.swift in Sources */,
+				96CD3B612537869D00F0A7F0 /* Patients+CoreDataClass.swift in Sources */,
+				96CD3B672537869D00F0A7F0 /* Medicines+CoreDataClass.swift in Sources */,
+				96CD3B5F2537869D00F0A7F0 /* Specialties+CoreDataClass.swift in Sources */,
+				96CD3B662537869D00F0A7F0 /* Prescription_items+CoreDataProperties.swift in Sources */,
 				9110F8D72535E52700CE7209 /* ListObatViewController.swift in Sources */,
 				91E9119625304ABE00124C0E /* SceneDelegate.swift in Sources */,
+				96CD3B5A2537869D00F0A7F0 /* Subcategories+CoreDataProperties.swift in Sources */,
+				96CD3B632537869D00F0A7F0 /* Prescriptions+CoreDataClass.swift in Sources */,
+				96CD3B682537869D00F0A7F0 /* Medicines+CoreDataProperties.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
