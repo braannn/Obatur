@@ -53,10 +53,8 @@ class ListObatViewController: UIViewController, UITableViewDelegate, UITableView
     func setupNavBar() {
         navigationController?.navigationBar.prefersLargeTitles = true
         
-//        let searchController = UISearchController(searchResultsController: nil)
-//        navigationItem.searchController = searchController
-//        navigationItem.hidesSearchBarWhenScrolling = false
     }
+    
     
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
