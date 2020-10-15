@@ -12,6 +12,13 @@ class ListObatViewController: UIViewController, UITableViewDelegate, UITableView
     @IBOutlet weak var hargaObatTableView: UITableView!
     @IBOutlet weak var prescriptionTableView: UITableView!
     @IBOutlet weak var lisObatSearchBar: UISearchBar!
+    @IBOutlet weak var namaDokterTxt: UILabel!
+    @IBOutlet weak var spesialisTxt: UILabel!
+    @IBOutlet weak var rumahSktTxt: UILabel!
+    
+    var dokter = ""
+    var spesialis = ""
+    var rumahSakit = ""
     
     var dataHarga : [String] = []
     var dataPrescription = [String]()
@@ -22,6 +29,10 @@ class ListObatViewController: UIViewController, UITableViewDelegate, UITableView
     override func viewDidLoad() {
         super.viewDidLoad()
         setupNavBar()
+        
+        self.namaDokterTxt?.text = dokter
+        self.spesialisTxt?.text = spesialis
+        self.rumahSktTxt?.text = rumahSakit
         
         hargaObatTableView.delegate = self
         prescriptionTableView.delegate = self
@@ -42,10 +53,8 @@ class ListObatViewController: UIViewController, UITableViewDelegate, UITableView
     func setupNavBar() {
         navigationController?.navigationBar.prefersLargeTitles = true
         
-//        let searchController = UISearchController(searchResultsController: nil)
-//        navigationItem.searchController = searchController
-//        navigationItem.hidesSearchBarWhenScrolling = false
     }
+    
     
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
