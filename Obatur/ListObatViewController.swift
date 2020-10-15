@@ -7,15 +7,17 @@
 
 import UIKit
 
-class ListObatViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class ListObatViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate {
     
     @IBOutlet weak var hargaObatTableView: UITableView!
     @IBOutlet weak var prescriptionTableView: UITableView!
+    @IBOutlet weak var lisObatSearchBar: UISearchBar!
     
     var dataHarga : [String] = []
     var dataPrescription = [String]()
     
     let data1 = ["syabran","jason","Fikri","sabariman","hendy","ricky","edrick"]
+    var filteredData: [String]!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,9 +27,12 @@ class ListObatViewController: UIViewController, UITableViewDelegate, UITableView
         prescriptionTableView.delegate = self
         hargaObatTableView.dataSource = self
         prescriptionTableView.dataSource = self
+        lisObatSearchBar.delegate = self
+        
         
         for index in 0...20 {
             dataHarga.append("data harga obat \(index)")
+            filteredData = dataHarga
         }
         dataPrescription.append(contentsOf: data1)
 
@@ -50,7 +55,7 @@ class ListObatViewController: UIViewController, UITableViewDelegate, UITableView
         var numberOfRow = 1
         switch tableView {
         case hargaObatTableView:
-            numberOfRow = dataHarga.count
+            numberOfRow = filteredData.count
         case prescriptionTableView:
             numberOfRow = dataPrescription.count
         default:
@@ -64,7 +69,7 @@ class ListObatViewController: UIViewController, UITableViewDelegate, UITableView
         switch tableView {
         case hargaObatTableView:
             cell = tableView.dequeueReusableCell(withIdentifier: "hargaObat", for: indexPath)
-            cell.textLabel?.text = dataHarga[indexPath.row]
+            cell.textLabel?.text = filteredData[indexPath.row]
         case prescriptionTableView:
             cell = tableView.dequeueReusableCell(withIdentifier: "prescriptionObat", for: indexPath)
             cell.textLabel?.text = dataPrescription[indexPath.row]
@@ -72,5 +77,23 @@ class ListObatViewController: UIViewController, UITableViewDelegate, UITableView
             print("somethings wrong !!")
         }
         return cell
+    }
+    
+    // MARK: search bar config
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        
+        filteredData = []
+        if searchText == "" {
+            filteredData = dataHarga
+        }
+        else {
+            for testData in dataHarga {
+                if testData.lowercased().contains(searchText.lowercased()) {
+                    
+                    filteredData.append(testData)
+                }
+            }
+        }
+        self.hargaObatTableView.reloadData()
     }
 }
