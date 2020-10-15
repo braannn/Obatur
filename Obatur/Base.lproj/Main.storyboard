@@ -11,7 +11,7 @@
         <!--Obat-->
         <scene sceneID="pKK-g0-ESx">
             <objects>
-                <viewController storyboardIdentifier="ListObatViewController" id="Nv3-QQ-e9Q" customClass="ListObatViewController" customModule="Obatur" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ListObatViewController" modalPresentationStyle="fullScreen" id="Nv3-QQ-e9Q" customClass="ListObatViewController" customModule="Obatur" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="F2j-Eb-Mxt">
                         <rect key="frame" x="0.0" y="0.0" width="1194" height="834"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -246,7 +246,10 @@
                     <connections>
                         <outlet property="hargaObatTableView" destination="eKV-Z3-hGR" id="GPp-ee-Vk9"/>
                         <outlet property="lisObatSearchBar" destination="CWB-vl-HuM" id="H9S-US-ggw"/>
+                        <outlet property="namaDokterTxt" destination="WpP-3f-UPT" id="4nU-Pl-trF"/>
                         <outlet property="prescriptionTableView" destination="1Xh-2U-S7T" id="q9F-F8-LZh"/>
+                        <outlet property="rumahSktTxt" destination="PC2-XC-QBx" id="Cut-aw-1jd"/>
+                        <outlet property="spesialisTxt" destination="Ixb-bB-tBO" id="2N7-Re-Ttd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Zw1-fE-Wjt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -260,6 +263,15 @@
                     <view key="view" contentMode="scaleToFill" id="rnV-aC-pnQ">
                         <rect key="frame" x="0.0" y="0.0" width="1194" height="834"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="prescription screen" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ox3-q7-8dj">
+                                <rect key="frame" x="524" y="407" width="147" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="BpD-7R-O3m"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
@@ -267,13 +279,14 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="liv-08-74h" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="902" y="1481"/>
+            <point key="canvasLocation" x="1589" y="796"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="fdw-ct-nYx">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="hb1-NR-k4Y" customClass="NavigationController" customModule="Obatur" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
+                    <navigationItem key="navigationItem" id="ouL-06-cXL"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="j2u-l1-yaw">
                         <rect key="frame" x="0.0" y="0.0" width="1194" height="50"/>
                         <autoresizingMask key="autoresizingMask"/>
