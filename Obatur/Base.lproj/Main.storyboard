@@ -259,7 +259,7 @@
         <!--Preskripsi Obat-->
         <scene sceneID="RI6-1p-rZK">
             <objects>
-                <viewController id="77h-dV-20U" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="77h-dV-20U" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="rnV-aC-pnQ">
                         <rect key="frame" x="0.0" y="0.0" width="1194" height="834"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
