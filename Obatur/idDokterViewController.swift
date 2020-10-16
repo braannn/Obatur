@@ -10,6 +10,8 @@ import UIKit
 class idDokterViewController: UIViewController, UITextFieldDelegate {
     
     
+    
+    @IBOutlet weak var idView: UIView!
     @IBOutlet weak var namaDokterTxtField: UITextField!
     @IBOutlet weak var spesialTxtField: UITextField!
     @IBOutlet weak var rsTxtField: UITextField!
@@ -25,6 +27,7 @@ class idDokterViewController: UIViewController, UITextFieldDelegate {
         self.namaDokterTxtField.delegate = self
         self.spesialTxtField.delegate = self
         self.rsTxtField.delegate = self
+        idView.layer.cornerRadius = 30
     }
     
     @IBAction func btnConfirm(_ sender: Any) {
