@@ -19,8 +19,6 @@
 		91E911AE25304ABF00124C0E /* ObaturTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91E911AD25304ABF00124C0E /* ObaturTests.swift */; };
 		91E911B925304ABF00124C0E /* ObaturUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91E911B825304ABF00124C0E /* ObaturUITests.swift */; };
 		96D3D0322533E4EB00435D7D /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96D3D0312533E4EB00435D7D /* NavigationController.swift */; };
-		F273533F25388C8500482255 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F273533E25388C8500482255 /* LoginViewController.swift */; };
-		F2ADA3B825388E0F00C6D357 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2ADA3B725388E0F00C6D357 /* RegisterViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,8 +57,6 @@
 		91E911B825304ABF00124C0E /* ObaturUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObaturUITests.swift; sourceTree = "<group>"; };
 		91E911BA25304ABF00124C0E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		96D3D0312533E4EB00435D7D /* NavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
-		F273533E25388C8500482255 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
-		F2ADA3B725388E0F00C6D357 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,8 +110,6 @@
 				91E9119325304ABE00124C0E /* AppDelegate.swift */,
 				91E9119525304ABE00124C0E /* SceneDelegate.swift */,
 				91E9119925304ABE00124C0E /* Main.storyboard */,
-				F273533E25388C8500482255 /* LoginViewController.swift */,
-				F2ADA3B725388E0F00C6D357 /* RegisterViewController.swift */,
 				9110F8E625383D5A00CE7209 /* Onboarding.storyboard */,
 				9110F8D62535E52700CE7209 /* ListObatViewController.swift */,
 				96D3D0312533E4EB00435D7D /* NavigationController.swift */,
@@ -277,10 +271,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F273533F25388C8500482255 /* LoginViewController.swift in Sources */,
 				9110F8DF253835EA00CE7209 /* idDokterViewController.swift in Sources */,
 				91E9119E25304ABE00124C0E /* Obatur.xcdatamodeld in Sources */,
-				F2ADA3B825388E0F00C6D357 /* RegisterViewController.swift in Sources */,
 				96D3D0322533E4EB00435D7D /* NavigationController.swift in Sources */,
 				91E9119425304ABE00124C0E /* AppDelegate.swift in Sources */,
 				9110F8D72535E52700CE7209 /* ListObatViewController.swift in Sources */,
@@ -461,7 +453,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = B3Z79P8J6A;
+				DEVELOPMENT_TEAM = V9WZSQKJ6P;
 				INFOPLIST_FILE = Obatur/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -480,7 +472,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = B3Z79P8J6A;
+				DEVELOPMENT_TEAM = V9WZSQKJ6P;
 				INFOPLIST_FILE = Obatur/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
