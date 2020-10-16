@@ -255,7 +255,7 @@
             </objects>
             <point key="canvasLocation" x="901.5075376884422" y="796.40287769784175"/>
         </scene>
-        <!--View Controller-->
+        <!--Preskripsi Obat-->
         <scene sceneID="RI6-1p-rZK">
             <objects>
                 <viewController id="77h-dV-20U" sceneMemberID="viewController">
@@ -263,22 +263,157 @@
                         <rect key="frame" x="0.0" y="0.0" width="1194" height="834"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="prescription screen" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ox3-q7-8dj">
-                                <rect key="frame" x="524" y="407" width="147" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nama Pasien : " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IOs-0H-gSG">
+                                <rect key="frame" x="156" y="84" width="119.5" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="koe-wh-uL3">
+                                <rect key="frame" x="156" y="118" width="87" height="22"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Umur (Tahun)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="thM-Vb-TJT">
+                                <rect key="frame" x="156" y="153" width="119.5" height="22"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Daftar Obat : " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FGC-EL-wQ2">
+                                <rect key="frame" x="156" y="195" width="109" height="22"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nama Obat" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rwr-Le-bFH">
+                                <rect key="frame" x="156" y="237" width="92" height="22"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="qx9-Xe-ikY">
+                                <rect key="frame" x="156" y="269" width="883" height="350"/>
+                                <color key="backgroundColor" red="0.93739813569999997" green="0.93689405920000002" blue="0.95686668159999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="vFP-VK-9f7">
+                                        <rect key="frame" x="0.0" y="28" width="883" height="42"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="vFP-VK-9f7" id="4pd-MK-nOY">
+                                            <rect key="frame" x="0.0" y="0.0" width="883" height="42"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Obat" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YEh-z3-LY6">
+                                                    <rect key="frame" x="0.0" y="10" width="42.5" height="22"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="brp kali 1 hari?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hmM-3H-z2G">
+                                                    <rect key="frame" x="267" y="10" width="124.5" height="22"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="brp kali 1 hari?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NeD-cd-5p4">
+                                                    <rect key="frame" x="469" y="10" width="124.5" height="22"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Kapan di konsumsi" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KDC-6m-QTl">
+                                                    <rect key="frame" x="655" y="10" width="162" height="22"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="YEh-z3-LY6" firstAttribute="leading" secondItem="4pd-MK-nOY" secondAttribute="leading" id="02v-fE-7b2"/>
+                                                <constraint firstAttribute="bottom" secondItem="YEh-z3-LY6" secondAttribute="bottom" constant="10" id="0bf-Hf-IEY"/>
+                                                <constraint firstItem="hmM-3H-z2G" firstAttribute="top" secondItem="4pd-MK-nOY" secondAttribute="top" constant="10" id="JaA-dm-BW3"/>
+                                                <constraint firstItem="NeD-cd-5p4" firstAttribute="leading" secondItem="4pd-MK-nOY" secondAttribute="leading" constant="469" id="TAr-Yt-XyE"/>
+                                                <constraint firstItem="NeD-cd-5p4" firstAttribute="top" secondItem="4pd-MK-nOY" secondAttribute="top" constant="10" id="ULH-S3-amF"/>
+                                                <constraint firstAttribute="bottom" secondItem="KDC-6m-QTl" secondAttribute="bottom" constant="10" id="eaV-yQ-mEa"/>
+                                                <constraint firstAttribute="bottom" secondItem="NeD-cd-5p4" secondAttribute="bottom" constant="10" id="fBw-GX-hed"/>
+                                                <constraint firstItem="KDC-6m-QTl" firstAttribute="leading" secondItem="4pd-MK-nOY" secondAttribute="leading" constant="655" id="gDD-k6-Rvh"/>
+                                                <constraint firstAttribute="bottom" secondItem="hmM-3H-z2G" secondAttribute="bottom" constant="10" id="iAx-Yp-opL"/>
+                                                <constraint firstItem="hmM-3H-z2G" firstAttribute="leading" secondItem="4pd-MK-nOY" secondAttribute="leading" constant="267" id="wSG-bd-Pwc"/>
+                                                <constraint firstItem="YEh-z3-LY6" firstAttribute="top" secondItem="4pd-MK-nOY" secondAttribute="top" constant="10" id="wg2-yQ-C2P"/>
+                                                <constraint firstItem="KDC-6m-QTl" firstAttribute="top" secondItem="4pd-MK-nOY" secondAttribute="top" constant="10" id="z9e-QT-t53"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Aturan Pakai" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BeO-5U-p8n">
+                                <rect key="frame" x="423" y="237" width="101" height="22"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Banyak (h)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mNb-AI-VQg">
+                                <rect key="frame" x="624" y="237" width="86.5" height="22"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Catatan" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OsL-T7-TmK">
+                                <rect key="frame" x="810.5" y="237" width="63.5" height="22"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Line" translatesAutoresizingMaskIntoConstraints="NO" id="Ctm-8D-9oj">
+                                <rect key="frame" x="88" y="655" width="1019" height="2"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xeI-hW-kyZ">
+                                <rect key="frame" x="424" y="714" width="347" height="39"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="39" id="GnI-D5-ty0"/>
+                                    <constraint firstAttribute="width" constant="347" id="fOx-HW-uKa"/>
+                                </constraints>
+                                <state key="normal" image="Kirim"/>
+                                <state key="highlighted" image="KirimTapped"/>
+                            </button>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" red="0.93739813569999997" green="0.93689405920000002" blue="0.95686668159999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="BpD-7R-O3m" firstAttribute="trailing" secondItem="Ctm-8D-9oj" secondAttribute="trailing" constant="88" id="04Y-eS-wPP"/>
+                            <constraint firstItem="FGC-EL-wQ2" firstAttribute="top" secondItem="thM-Vb-TJT" secondAttribute="bottom" constant="20" id="4kU-Sf-PLS"/>
+                            <constraint firstItem="xeI-hW-kyZ" firstAttribute="top" secondItem="Ctm-8D-9oj" secondAttribute="bottom" constant="57" id="4oI-PR-yhV"/>
+                            <constraint firstItem="thM-Vb-TJT" firstAttribute="leading" secondItem="BpD-7R-O3m" secondAttribute="leading" constant="156" id="6de-Ib-P6o"/>
+                            <constraint firstItem="BeO-5U-p8n" firstAttribute="leading" secondItem="Rwr-Le-bFH" secondAttribute="trailing" constant="175" id="6es-SA-6lA"/>
+                            <constraint firstItem="thM-Vb-TJT" firstAttribute="top" secondItem="koe-wh-uL3" secondAttribute="bottom" constant="13" id="9XE-WI-Zn7"/>
+                            <constraint firstItem="IOs-0H-gSG" firstAttribute="leading" secondItem="BpD-7R-O3m" secondAttribute="leading" constant="156" id="DgW-fU-oSl"/>
+                            <constraint firstItem="Rwr-Le-bFH" firstAttribute="leading" secondItem="BpD-7R-O3m" secondAttribute="leading" constant="156" id="EU7-RR-tPQ"/>
+                            <constraint firstItem="Ctm-8D-9oj" firstAttribute="top" secondItem="qx9-Xe-ikY" secondAttribute="bottom" constant="36" id="EUk-Fu-UW1"/>
+                            <constraint firstItem="koe-wh-uL3" firstAttribute="leading" secondItem="BpD-7R-O3m" secondAttribute="leading" constant="156" id="Kks-Dq-L9Y"/>
+                            <constraint firstItem="qx9-Xe-ikY" firstAttribute="leading" secondItem="BpD-7R-O3m" secondAttribute="leading" constant="156" id="L5L-6S-FZZ"/>
+                            <constraint firstItem="BpD-7R-O3m" firstAttribute="trailing" secondItem="qx9-Xe-ikY" secondAttribute="trailing" constant="156" id="OnI-bS-WVM"/>
+                            <constraint firstItem="mNb-AI-VQg" firstAttribute="leading" secondItem="BeO-5U-p8n" secondAttribute="trailing" constant="100" id="PP6-7h-fBw"/>
+                            <constraint firstItem="Rwr-Le-bFH" firstAttribute="top" secondItem="FGC-EL-wQ2" secondAttribute="bottom" constant="20" id="Sjl-zR-ccC"/>
+                            <constraint firstItem="qx9-Xe-ikY" firstAttribute="top" secondItem="OsL-T7-TmK" secondAttribute="bottom" constant="10" id="V4I-y9-R70"/>
+                            <constraint firstItem="qx9-Xe-ikY" firstAttribute="top" secondItem="BeO-5U-p8n" secondAttribute="bottom" constant="10" id="WIm-3j-Qqv"/>
+                            <constraint firstItem="qx9-Xe-ikY" firstAttribute="top" secondItem="mNb-AI-VQg" secondAttribute="bottom" constant="10" id="h2S-vf-uGG"/>
+                            <constraint firstItem="IOs-0H-gSG" firstAttribute="top" secondItem="BpD-7R-O3m" secondAttribute="top" constant="34" id="jF5-o5-tmQ"/>
+                            <constraint firstItem="qx9-Xe-ikY" firstAttribute="top" secondItem="Rwr-Le-bFH" secondAttribute="bottom" constant="10" id="ljV-mg-ePL"/>
+                            <constraint firstItem="OsL-T7-TmK" firstAttribute="leading" secondItem="mNb-AI-VQg" secondAttribute="trailing" constant="100" id="lqW-U7-c4t"/>
+                            <constraint firstItem="koe-wh-uL3" firstAttribute="top" secondItem="IOs-0H-gSG" secondAttribute="bottom" constant="13" id="oHn-rT-oAj"/>
+                            <constraint firstItem="FGC-EL-wQ2" firstAttribute="leading" secondItem="BpD-7R-O3m" secondAttribute="leading" constant="156" id="qq8-eg-n2w"/>
+                            <constraint firstItem="BpD-7R-O3m" firstAttribute="trailing" secondItem="xeI-hW-kyZ" secondAttribute="trailing" constant="424" id="r1z-ib-mIC"/>
+                            <constraint firstItem="Ctm-8D-9oj" firstAttribute="leading" secondItem="BpD-7R-O3m" secondAttribute="leading" constant="88" id="vmy-W7-xeV"/>
+                            <constraint firstItem="BpD-7R-O3m" firstAttribute="bottom" secondItem="xeI-hW-kyZ" secondAttribute="bottom" constant="61" id="yNk-lO-Rfi"/>
+                            <constraint firstItem="xeI-hW-kyZ" firstAttribute="leading" secondItem="BpD-7R-O3m" secondAttribute="leading" constant="424" id="zCH-aa-Drq"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="BpD-7R-O3m"/>
                     </view>
-                    <navigationItem key="navigationItem" id="Inm-lg-bvc"/>
+                    <navigationItem key="navigationItem" title="Preskripsi Obat" id="Inm-lg-bvc"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="liv-08-74h" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1589" y="796"/>
+            <point key="canvasLocation" x="1588.9447236180904" y="795.68345323741016"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="5l5-VO-tLn">
@@ -568,6 +703,9 @@
     </inferredMetricsTieBreakers>
     <resources>
         <image name="1140-pharmacist-woman.imgcache.rev73f7dac4517c40077d7873481d533469" width="667" height="653"/>
+        <image name="Kirim" width="347" height="39"/>
+        <image name="KirimTapped" width="347" height="39"/>
+        <image name="Line" width="1012" height="2"/>
         <image name="LogBut" width="202" height="72"/>
         <image name="LogButTapped" width="202" height="72"/>
         <image name="Logo" width="118" height="118"/>
