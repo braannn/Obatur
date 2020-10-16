@@ -6,18 +6,17 @@
 //
 
 import UIKit
+import CoreData
 
 class idDokterViewController: UIViewController, UITextFieldDelegate {
-    
     
     @IBOutlet weak var namaDokterTxtField: UITextField!
     @IBOutlet weak var spesialTxtField: UITextField!
     @IBOutlet weak var rsTxtField: UITextField!
     @IBOutlet weak var btnConfirm: UIButton!
     
-    var Dokter = ""
-    var spesialis = ""
-    var rumahSakit = ""
+    //Reference to managed onject context
+    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,9 +27,13 @@ class idDokterViewController: UIViewController, UITextFieldDelegate {
     }
     
     @IBAction func btnConfirm(_ sender: Any) {
-        self.Dokter = namaDokterTxtField.text!
-        self.spesialis = spesialTxtField.text!
-        self.rumahSakit = rsTxtField.text!
+        let doctor = Doctors(context: context)
+        
+        doctor.name = namaDokterTxtField.text!
+        doctor.specialty = spesialTxtField.text!
+        doctor.hospital = rsTxtField.text!
+        
+        saveId()
         
         performSegue(withIdentifier: "dataSaved", sender: self)
     }
@@ -41,5 +44,14 @@ class idDokterViewController: UIViewController, UITextFieldDelegate {
         vc.dokter = self.namaDokterTxtField.text!
         vc.spesialis = self.spesialTxtField.text!
         vc.rumahSakit = self.rsTxtField.text!
+    }
+    
+    func saveId() {
+        do {
+            try context.save()
+        }
+        catch {
+            print("Error saving context \(error )")
+        }
     }
 }
