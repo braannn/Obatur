@@ -8,7 +8,7 @@
 import UIKit
 import CoreData
 
-class ListObatViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate {
+class ListObatViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate, UITextFieldDelegate {
     
     @IBOutlet weak var hargaObatTableView: UITableView!
     @IBOutlet weak var prescriptionTableView: UITableView!
@@ -16,6 +16,8 @@ class ListObatViewController: UIViewController, UITableViewDelegate, UITableView
     @IBOutlet weak var namaDokterTxt: UILabel!
     @IBOutlet weak var spesialisTxt: UILabel!
     @IBOutlet weak var rumahSktTxt: UILabel!
+    @IBOutlet weak var dateTxtField: UITextField!
+    @IBOutlet weak var namaPasienTxt: UITextField!
     
     //Reference to managed object context
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
@@ -28,20 +30,25 @@ class ListObatViewController: UIViewController, UITableViewDelegate, UITableView
     
     var dataHarga : [String] = []
     var dataPrescription = [String]()
+    var dataPasien = ""
+    var umurPasien = ""
     
     let data1 = ["syabran","jason","Fikri","sabariman","hendy","ricky","edrick"]
     var filteredData: [String]!
     
+    let datePicker = UIDatePicker()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupNavBar()
-        
+        createDatePicker()
         loadDoctor()
         
         for doctor in doctorArray {
             namaDokterTxt.text = doctor.name
             spesialisTxt.text = doctor.specialty
             rumahSktTxt.text = doctor.hospital
+            
         }
         
         hargaObatTableView.delegate = self
@@ -49,6 +56,8 @@ class ListObatViewController: UIViewController, UITableViewDelegate, UITableView
         hargaObatTableView.dataSource = self
         prescriptionTableView.dataSource = self
         lisObatSearchBar.delegate = self
+        self.namaPasienTxt.delegate = self
+        self.dateTxtField.delegate = self
         
         
         for index in 0...20 {
@@ -59,9 +68,44 @@ class ListObatViewController: UIViewController, UITableViewDelegate, UITableView
 
     }
     
+    // mark: for date picker
+    func createDatePicker() {
+        //toolbar
+        let toolbar = UIToolbar()
+        toolbar.sizeToFit()
+        
+        //bar button
+        let doneButton = UIBarButtonItem(barButtonSystemItem: .done
+            , target: nil, action: #selector(donePressed))
+        
+        toolbar.setItems([doneButton], animated: true)
+        
+        //assign toolbar
+        dateTxtField.inputAccessoryView = toolbar
+        
+        //assign date picker to textfield
+        dateTxtField.inputView = datePicker
+        
+        //date picker mode
+        datePicker.datePickerMode = .date
+        
+        //alligment
+        dateTxtField.textAlignment = .center
+    }
+    
+    @objc func donePressed() {
+        //formatter
+        let formatter = DateFormatter()
+        formatter.dateStyle = .medium
+        formatter.timeStyle = .none
+        
+        dateTxtField.text = formatter.string(from: datePicker.date)
+        self.view.endEditing(true)
+    }
+    
     func setupNavBar() {
         navigationController?.navigationBar.prefersLargeTitles = true
-        
+        navigationItem.largeTitleDisplayMode = .always
     }
     
     
@@ -135,4 +179,17 @@ class ListObatViewController: UIViewController, UITableViewDelegate, UITableView
             print("Error fetching data from context \(error)")
         }
     }
+    
+    @IBAction func btnKonfirmasi(_ sender: Any) {
+        self.dataPasien = namaPasienTxt.text!
+        self.umurPasien = dateTxtField.text!
+        performSegue(withIdentifier: "kirimData", sender: self)
+    }
+    // kirim nama user ke screen select role
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let vc = segue.destination as! PrescriptionScreen
+        vc.namaPasien = self.namaPasienTxt.text!
+        vc.umurPasien = self.dateTxtField.text!
+    }
+    
 }
