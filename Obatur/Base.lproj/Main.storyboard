@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="hb1-NR-k4Y">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="hb1-NR-k4Y">
     <device id="ipad11_0rounded" orientation="landscape" layout="fullscreen" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
@@ -258,43 +258,43 @@
         <!--Preskripsi Obat-->
         <scene sceneID="RI6-1p-rZK">
             <objects>
-                <viewController id="77h-dV-20U" sceneMemberID="viewController">
+                <viewController id="77h-dV-20U" customClass="Prescription_ViewController" customModule="Obatur" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="rnV-aC-pnQ">
                         <rect key="frame" x="0.0" y="0.0" width="1194" height="834"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nama Pasien : " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IOs-0H-gSG">
-                                <rect key="frame" x="156" y="84" width="119.5" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nama Pasien  " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IOs-0H-gSG">
+                                <rect key="frame" x="156" y="84" width="114.5" height="22"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="koe-wh-uL3">
-                                <rect key="frame" x="156" y="118" width="87" height="22"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="koe-wh-uL3">
+                                <rect key="frame" x="156" y="119" width="89" height="22"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Umur (Tahun)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="thM-Vb-TJT">
-                                <rect key="frame" x="156" y="153" width="119.5" height="22"/>
+                                <rect key="frame" x="156" y="154" width="119.5" height="22"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Daftar Obat : " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FGC-EL-wQ2">
-                                <rect key="frame" x="156" y="195" width="109" height="22"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Daftar Obat  " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FGC-EL-wQ2">
+                                <rect key="frame" x="156" y="196" width="104" height="22"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nama Obat" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rwr-Le-bFH">
-                                <rect key="frame" x="156" y="237" width="92" height="22"/>
+                                <rect key="frame" x="156" y="238" width="92" height="22"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="qx9-Xe-ikY">
-                                <rect key="frame" x="156" y="269" width="883" height="350"/>
+                                <rect key="frame" x="156" y="270" width="883" height="349"/>
                                 <color key="backgroundColor" red="0.93739813569999997" green="0.93689405920000002" blue="0.95686668159999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="vFP-VK-9f7">
@@ -348,19 +348,19 @@
                                 </prototypes>
                             </tableView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Aturan Pakai" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BeO-5U-p8n">
-                                <rect key="frame" x="423" y="237" width="101" height="22"/>
+                                <rect key="frame" x="423" y="238" width="101" height="22"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Banyak (h)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mNb-AI-VQg">
-                                <rect key="frame" x="624" y="237" width="86.5" height="22"/>
+                                <rect key="frame" x="624" y="238" width="86.5" height="22"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Catatan" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OsL-T7-TmK">
-                                <rect key="frame" x="810.5" y="237" width="63.5" height="22"/>
+                                <rect key="frame" x="810.5" y="238" width="63.5" height="22"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -376,6 +376,9 @@
                                 </constraints>
                                 <state key="normal" image="Kirim"/>
                                 <state key="highlighted" image="KirimTapped"/>
+                                <connections>
+                                    <action selector="button:" destination="77h-dV-20U" eventType="touchUpInside" id="SNz-cg-Cm0"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.93739813569999997" green="0.93689405920000002" blue="0.95686668159999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -410,6 +413,15 @@
                         <viewLayoutGuide key="safeArea" id="BpD-7R-O3m"/>
                     </view>
                     <navigationItem key="navigationItem" title="Preskripsi Obat" id="Inm-lg-bvc"/>
+                    <connections>
+                        <outlet property="aturanminum" destination="hmM-3H-z2G" id="JON-GC-ojP"/>
+                        <outlet property="berapakalisehari" destination="NeD-cd-5p4" id="Y9k-E6-1bR"/>
+                        <outlet property="button" destination="xeI-hW-kyZ" id="xay-gE-fYg"/>
+                        <outlet property="catatan" destination="KDC-6m-QTl" id="zUo-hy-qI4"/>
+                        <outlet property="patientage" destination="thM-Vb-TJT" id="KTw-Xn-e5P"/>
+                        <outlet property="patientmedicine" destination="FGC-EL-wQ2" id="x60-zY-vKG"/>
+                        <outlet property="patientusername" destination="koe-wh-uL3" id="NTY-nv-hG2"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="liv-08-74h" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

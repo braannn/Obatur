@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		87BFA679253ADC4000A4BF20 /* Prescription ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87BFA678253ADC4000A4BF20 /* Prescription ViewController.swift */; };
 		9110F8D72535E52700CE7209 /* ListObatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9110F8D62535E52700CE7209 /* ListObatViewController.swift */; };
 		9110F8DF253835EA00CE7209 /* idDokterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9110F8DE253835EA00CE7209 /* idDokterViewController.swift */; };
 		9110F8E725383D5A00CE7209 /* Onboarding.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9110F8E625383D5A00CE7209 /* Onboarding.storyboard */; };
@@ -41,6 +42,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		87BFA678253ADC4000A4BF20 /* Prescription ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Prescription ViewController.swift"; sourceTree = "<group>"; };
 		9110F8D62535E52700CE7209 /* ListObatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListObatViewController.swift; sourceTree = "<group>"; };
 		9110F8DE253835EA00CE7209 /* idDokterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = idDokterViewController.swift; sourceTree = "<group>"; };
 		9110F8E625383D5A00CE7209 /* Onboarding.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Onboarding.storyboard; sourceTree = "<group>"; };
@@ -124,6 +126,7 @@
 				91E911A125304ABF00124C0E /* LaunchScreen.storyboard */,
 				91E911A425304ABF00124C0E /* Info.plist */,
 				91E9119C25304ABE00124C0E /* Obatur.xcdatamodeld */,
+				87BFA678253ADC4000A4BF20 /* Prescription ViewController.swift */,
 			);
 			path = Obatur;
 			sourceTree = "<group>";
@@ -280,6 +283,7 @@
 				F273533F25388C8500482255 /* LoginViewController.swift in Sources */,
 				9110F8DF253835EA00CE7209 /* idDokterViewController.swift in Sources */,
 				91E9119E25304ABE00124C0E /* Obatur.xcdatamodeld in Sources */,
+				87BFA679253ADC4000A4BF20 /* Prescription ViewController.swift in Sources */,
 				F2ADA3B825388E0F00C6D357 /* RegisterViewController.swift in Sources */,
 				96D3D0322533E4EB00435D7D /* NavigationController.swift in Sources */,
 				91E9119425304ABE00124C0E /* AppDelegate.swift in Sources */,
