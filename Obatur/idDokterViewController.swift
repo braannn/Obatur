@@ -10,15 +10,13 @@ import CoreData
 
 class idDokterViewController: UIViewController, UITextFieldDelegate {
     
-    
-    
     @IBOutlet weak var idView: UIView!
     @IBOutlet weak var namaDokterTxtField: UITextField!
     @IBOutlet weak var spesialTxtField: UITextField!
     @IBOutlet weak var rsTxtField: UITextField!
     @IBOutlet weak var btnConfirm: UIButton!
     
-    //Reference to managed onject context
+    //Reference to managed object context
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     
     override func viewDidLoad() {

@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import CoreData
 
 class ListObatViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate {
     
@@ -16,9 +17,14 @@ class ListObatViewController: UIViewController, UITableViewDelegate, UITableView
     @IBOutlet weak var spesialisTxt: UILabel!
     @IBOutlet weak var rumahSktTxt: UILabel!
     
-    var dokter = ""
-    var spesialis = ""
-    var rumahSakit = ""
+    //Reference to managed object context
+    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+    
+    var doctorArray = [Doctors]()
+    
+    var dokter: String = ""
+    var spesialis: String = ""
+    var rumahSakit: String = ""
     
     var dataHarga : [String] = []
     var dataPrescription = [String]()
@@ -30,9 +36,13 @@ class ListObatViewController: UIViewController, UITableViewDelegate, UITableView
         super.viewDidLoad()
         setupNavBar()
         
-        self.namaDokterTxt?.text = dokter
-        self.spesialisTxt?.text = spesialis
-        self.rumahSktTxt?.text = rumahSakit
+        loadDoctor()
+        
+        for doctor in doctorArray {
+            namaDokterTxt.text = doctor.name
+            spesialisTxt.text = doctor.specialty
+            rumahSktTxt.text = doctor.hospital
+        }
         
         hargaObatTableView.delegate = self
         prescriptionTableView.delegate = self
@@ -47,7 +57,6 @@ class ListObatViewController: UIViewController, UITableViewDelegate, UITableView
         }
         dataPrescription.append(contentsOf: data1)
 
-        
     }
     
     func setupNavBar() {
@@ -114,5 +123,16 @@ class ListObatViewController: UIViewController, UITableViewDelegate, UITableView
     private func textViewShouldReturn(_ textView: UITextView) -> Bool {
         textView.resignFirstResponder()
         return (true)
+    }
+    
+    //Load doctor's identity
+    func loadDoctor() {
+        let request: NSFetchRequest<Doctors> = Doctors.fetchRequest()
+        do {
+            doctorArray = try context.fetch(request)
+        }
+        catch {
+            print("Error fetching data from context \(error)")
+        }
     }
 }
