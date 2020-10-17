@@ -35,6 +35,7 @@ class idDokterViewController: UIViewController, UITextFieldDelegate {
         doctor.specialty = spesialTxtField.text!
         doctor.hospital = rsTxtField.text!
         
+        
         saveId()
         
         performSegue(withIdentifier: "dataSaved", sender: self)

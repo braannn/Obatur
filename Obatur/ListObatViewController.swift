@@ -8,7 +8,7 @@
 import UIKit
 import CoreData
 
-class ListObatViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate {
+class ListObatViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate, UITextFieldDelegate {
     
     @IBOutlet weak var hargaObatTableView: UITableView!
     @IBOutlet weak var prescriptionTableView: UITableView!
@@ -30,6 +30,8 @@ class ListObatViewController: UIViewController, UITableViewDelegate, UITableView
     
     var dataHarga : [String] = []
     var dataPrescription = [String]()
+    var dataPasien = ""
+    var umurPasien = ""
     
     let data1 = ["syabran","jason","Fikri","sabariman","hendy","ricky","edrick"]
     var filteredData: [String]!
@@ -54,6 +56,8 @@ class ListObatViewController: UIViewController, UITableViewDelegate, UITableView
         hargaObatTableView.dataSource = self
         prescriptionTableView.dataSource = self
         lisObatSearchBar.delegate = self
+        self.namaPasienTxt.delegate = self
+        self.dateTxtField.delegate = self
         
         
         for index in 0...20 {
@@ -175,4 +179,17 @@ class ListObatViewController: UIViewController, UITableViewDelegate, UITableView
             print("Error fetching data from context \(error)")
         }
     }
+    
+    @IBAction func btnKonfirmasi(_ sender: Any) {
+        self.dataPasien = namaPasienTxt.text!
+        self.umurPasien = dateTxtField.text!
+        performSegue(withIdentifier: "kirimData", sender: self)
+    }
+    // kirim nama user ke screen select role
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let vc = segue.destination as! PrescriptionScreen
+        vc.namaPasien = self.namaPasienTxt.text!
+        vc.umurPasien = self.dateTxtField.text!
+    }
+    
 }

@@ -67,7 +67,8 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <segue destination="77h-dV-20U" kind="show" id="1PU-3V-alb"/>
+                                    <action selector="btnKonfirmasi:" destination="Nv3-QQ-e9Q" eventType="touchUpInside" id="Gwd-BC-xM8"/>
+                                    <segue destination="77h-dV-20U" kind="show" identifier="kirimData" id="1PU-3V-alb"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="erw-4d-b1y">
@@ -265,7 +266,7 @@
         <!--Preskripsi Obat-->
         <scene sceneID="RI6-1p-rZK">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="77h-dV-20U" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PrescriptionScreen" modalPresentationStyle="fullScreen" id="77h-dV-20U" customClass="PrescriptionScreen" customModule="Obatur" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="rnV-aC-pnQ">
                         <rect key="frame" x="0.0" y="0.0" width="1194" height="834"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -276,14 +277,14 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="koe-wh-uL3">
-                                <rect key="frame" x="156" y="118" width="86" height="22"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="koe-wh-uL3">
+                                <rect key="frame" x="156" y="118" width="280" height="22"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Umur (Tahun)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="thM-Vb-TJT">
-                                <rect key="frame" x="156" y="153" width="119" height="22"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Umur (Tahun)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="thM-Vb-TJT">
+                                <rect key="frame" x="156" y="153" width="280" height="22"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -416,6 +417,10 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Preskripsi Obat" id="Inm-lg-bvc"/>
+                    <connections>
+                        <outlet property="namaPasienTxt" destination="koe-wh-uL3" id="Eby-E8-XUR"/>
+                        <outlet property="umurPasienTxt" destination="thM-Vb-TJT" id="8Pn-Hf-6bH"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="liv-08-74h" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
