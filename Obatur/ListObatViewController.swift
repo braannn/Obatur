@@ -23,7 +23,7 @@ class ListObatViewController: UIViewController, UITableViewDelegate, UITableView
     var dataHarga : [String] = []
     var dataPrescription = [String]()
     
-    let data1 = ["syabran","jason","Fikri","sabariman","hendy","ricky","edrick"]
+    let data1 = ["syabran","jason","Fikri","sabariman","hendy","Ricky Andi Kurniawan","edrick"]
     var filteredData: [String]!
     
     override func viewDidLoad() {
