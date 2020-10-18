@@ -15,6 +15,7 @@ class PrescriptionScreen: UIViewController {
     var namaPasien = ""
     var umurPasien = ""
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         

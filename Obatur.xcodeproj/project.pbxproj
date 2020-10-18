@@ -11,7 +11,6 @@
 		9110F8DF253835EA00CE7209 /* idDokterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9110F8DE253835EA00CE7209 /* idDokterViewController.swift */; };
 		9110F8E725383D5A00CE7209 /* Onboarding.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9110F8E625383D5A00CE7209 /* Onboarding.storyboard */; };
 		9183A88A253B867C0032BF50 /* PrescriptionScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9183A889253B867C0032BF50 /* PrescriptionScreen.swift */; };
-		91B1D037253A8056000D5AFF /* PasienDanKategoriVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91B1D036253A8056000D5AFF /* PasienDanKategoriVC.swift */; };
 		91E9119425304ABE00124C0E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91E9119325304ABE00124C0E /* AppDelegate.swift */; };
 		91E9119625304ABE00124C0E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91E9119525304ABE00124C0E /* SceneDelegate.swift */; };
 		91E9119B25304ABE00124C0E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 91E9119925304ABE00124C0E /* Main.storyboard */; };
@@ -45,7 +44,6 @@
 		9110F8DE253835EA00CE7209 /* idDokterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = idDokterViewController.swift; sourceTree = "<group>"; };
 		9110F8E625383D5A00CE7209 /* Onboarding.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Onboarding.storyboard; sourceTree = "<group>"; };
 		9183A889253B867C0032BF50 /* PrescriptionScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrescriptionScreen.swift; sourceTree = "<group>"; };
-		91B1D036253A8056000D5AFF /* PasienDanKategoriVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasienDanKategoriVC.swift; sourceTree = "<group>"; };
 		91E9119025304ABE00124C0E /* Obatur.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Obatur.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		91E9119325304ABE00124C0E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		91E9119525304ABE00124C0E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -123,7 +121,6 @@
 				91E911A125304ABF00124C0E /* LaunchScreen.storyboard */,
 				91E911A425304ABF00124C0E /* Info.plist */,
 				91E9119C25304ABE00124C0E /* Obatur.xcdatamodeld */,
-				91B1D036253A8056000D5AFF /* PasienDanKategoriVC.swift */,
 			);
 			path = Obatur;
 			sourceTree = "<group>";
@@ -278,7 +275,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				9110F8DF253835EA00CE7209 /* idDokterViewController.swift in Sources */,
-				91B1D037253A8056000D5AFF /* PasienDanKategoriVC.swift in Sources */,
 				91E9119E25304ABE00124C0E /* Obatur.xcdatamodeld in Sources */,
 				96D3D0322533E4EB00435D7D /* NavigationController.swift in Sources */,
 				91E9119425304ABE00124C0E /* AppDelegate.swift in Sources */,
