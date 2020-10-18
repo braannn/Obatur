@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="17192" systemVersion="19H2" minimumToolsVersion="Automatic" sourceLanguage="Swift" usedWithCloudKit="YES" userDefinedModelVersionIdentifier="">
+    <entity name="Categories" representedClassName=".Categories" syncable="YES" codeGenerationType="class">
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <relationship name="medicines" optional="YES" toMany="YES" deletionRule="No Action" destinationEntity="Medicines" inverseName="category" inverseEntity="Medicines"/>
+        <relationship name="subcategoryies" optional="YES" toMany="YES" deletionRule="No Action" destinationEntity="Subcategories" inverseName="category" inverseEntity="Subcategories"/>
+    </entity>
+    <entity name="Doctors" representedClassName=".Doctors" syncable="YES" codeGenerationType="class">
+        <attribute name="hospital" optional="YES" attributeType="String"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <attribute name="specialty" optional="YES" attributeType="String"/>
+        <relationship name="prescriptions" optional="YES" toMany="YES" deletionRule="No Action" destinationEntity="Prescriptions" inverseName="doctor" inverseEntity="Prescriptions"/>
+    </entity>
+    <entity name="Medicines" representedClassName=".Medicines" syncable="YES" codeGenerationType="class">
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <attribute name="price" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <relationship name="category" optional="YES" maxCount="1" deletionRule="No Action" destinationEntity="Categories" inverseName="medicines" inverseEntity="Categories"/>
+        <relationship name="prescription_item" optional="YES" maxCount="1" deletionRule="No Action" destinationEntity="Prescription_items" inverseName="medicine" inverseEntity="Prescription_items"/>
+    </entity>
+    <entity name="Patients" representedClassName=".Patients" syncable="YES" codeGenerationType="class">
+        <attribute name="dob" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <relationship name="prescription" optional="YES" maxCount="1" deletionRule="No Action" destinationEntity="Prescriptions" inverseName="patient" inverseEntity="Prescriptions"/>
+    </entity>
+    <entity name="Prescription_items" representedClassName=".Prescription_items" syncable="YES" codeGenerationType="class">
+        <attribute name="instruction" optional="YES" attributeType="String"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <relationship name="medicine" optional="YES" maxCount="1" deletionRule="No Action" destinationEntity="Medicines" inverseName="prescription_item" inverseEntity="Medicines"/>
+        <relationship name="prescription" optional="YES" maxCount="1" deletionRule="No Action" destinationEntity="Prescriptions" inverseName="prescription_items" inverseEntity="Prescriptions"/>
+    </entity>
+    <entity name="Prescriptions" representedClassName=".Prescriptions" syncable="YES" codeGenerationType="class">
+        <attribute name="created_at" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="price" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <relationship name="doctor" optional="YES" maxCount="1" deletionRule="No Action" destinationEntity="Doctors" inverseName="prescriptions" inverseEntity="Doctors"/>
+        <relationship name="patient" optional="YES" maxCount="1" deletionRule="No Action" destinationEntity="Patients" inverseName="prescription" inverseEntity="Patients"/>
+        <relationship name="prescription_items" optional="YES" toMany="YES" deletionRule="No Action" destinationEntity="Prescription_items" inverseName="prescription" inverseEntity="Prescription_items"/>
+    </entity>
+    <entity name="Subcategories" representedClassName=".Subcategories" syncable="YES" codeGenerationType="class">
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <relationship name="category" optional="YES" maxCount="1" deletionRule="No Action" destinationEntity="Categories" inverseName="subcategoryies" inverseEntity="Categories"/>
+    </entity>
+    <elements>
+        <element name="Categories" positionX="-18" positionY="27" width="128" height="88"/>
+        <element name="Doctors" positionX="-63" positionY="-18" width="128" height="103"/>
+        <element name="Medicines" positionX="0" positionY="45" width="128" height="103"/>
+        <element name="Patients" positionX="18" positionY="63" width="128" height="88"/>
+        <element name="Prescription_items" positionX="36" positionY="81" width="128" height="103"/>
+        <element name="Prescriptions" positionX="-36" positionY="9" width="128" height="118"/>
+        <element name="Subcategories" positionX="-54" positionY="-9" width="128" height="73"/>
+    </elements>
+</model>
