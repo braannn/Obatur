@@ -66,6 +66,7 @@ class ListObatViewController: UIViewController, UITableViewDelegate, UITableView
         }
         dataPrescription.append(contentsOf: data1)
 
+        namaPasienTxt.textAlignment = .center
     }
     
     // mark: for date picker
@@ -105,7 +106,7 @@ class ListObatViewController: UIViewController, UITableViewDelegate, UITableView
     
     func setupNavBar() {
         navigationController?.navigationBar.prefersLargeTitles = true
-        navigationItem.largeTitleDisplayMode = .always
+//        navigationItem.largeTitleDisplayMode = .always
     }
     
     
@@ -183,9 +184,9 @@ class ListObatViewController: UIViewController, UITableViewDelegate, UITableView
     @IBAction func btnKonfirmasi(_ sender: Any) {
         self.dataPasien = namaPasienTxt.text!
         self.umurPasien = dateTxtField.text!
-        performSegue(withIdentifier: "kirimData", sender: self)
+//        performSegue(withIdentifier: "kirimData", sender: self)
     }
-    // kirim nama user ke screen select role
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let vc = segue.destination as! PrescriptionScreen
         vc.namaPasien = self.namaPasienTxt.text!
