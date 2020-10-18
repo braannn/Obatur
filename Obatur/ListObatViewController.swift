@@ -37,6 +37,13 @@ class ListObatViewController: UIViewController, UITableViewDelegate, UITableView
     var filteredData: [String]!
     
     let datePicker = UIDatePicker()
+    let formatter: DateFormatter = {
+        let formatter = DateFormatter()
+        formatter.timeStyle = .none
+        formatter.locale = .current
+//        formatter.dateFormat = "yyyy"
+        return formatter
+    }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -96,10 +103,7 @@ class ListObatViewController: UIViewController, UITableViewDelegate, UITableView
     
     @objc func donePressed() {
         //formatter
-        let formatter = DateFormatter()
         formatter.dateStyle = .medium
-        formatter.timeStyle = .none
-        
         dateTxtField.text = formatter.string(from: datePicker.date)
         self.view.endEditing(true)
     }
@@ -183,14 +187,23 @@ class ListObatViewController: UIViewController, UITableViewDelegate, UITableView
     
     @IBAction func btnKonfirmasi(_ sender: Any) {
         self.dataPasien = namaPasienTxt.text!
-        self.umurPasien = dateTxtField.text!
-//        performSegue(withIdentifier: "kirimData", sender: self)
+        
+        //formatter
+        formatter.dateFormat = "yyyy"
+        dateTxtField.text = formatter.string(from: datePicker.date)
+        guard let birthYear = dateTxtField.text else { return }
+        let date = Date()
+        let calender = Calendar.current
+        let currentYear = calender.component(.year, from: date)
+        let result = currentYear - Int(birthYear)!
+        
+        self.umurPasien = "\(result) tahun"
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let vc = segue.destination as! PrescriptionScreen
         vc.namaPasien = self.namaPasienTxt.text!
-        vc.umurPasien = self.dateTxtField.text!
+        vc.umurPasien = self.umurPasien
     }
     
 }
