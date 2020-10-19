@@ -16,22 +16,25 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
     @IBOutlet weak var rumahSktTxt: UILabel!
     @IBOutlet weak var dateTxtField: UITextField!
     @IBOutlet weak var namaPasienTxt: UITextField!
+    @IBOutlet weak var hargaObatTableView: UITableView!
+    @IBOutlet weak var listObatSearchBar: UISearchBar!
     
     //Reference to managed object context
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     
     var doctorArray = [Doctors]()
+    var medicineArray = [Medicines]()
     
     var dokter: String = ""
     var spesialis: String = ""
     var rumahSakit: String = ""
-    
-    var dataPrescription = [String]()
     var dataPasien = ""
     var umurPasien = ""
     
-    let data1 = ["syabran","jason","Fikri","sabariman","hendy","ricky","edrick"]
+    var dataHarga : [String] = []
     var filteredData: [String]!
+    var dataPrescription = [String]()
+
     
     let datePicker = UIDatePicker()
     let formatter: DateFormatter = {
@@ -46,19 +49,25 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
         setupNavBar()
         createDatePicker()
         loadDoctor()
+        loadMedicine()
         
         for doctor in doctorArray {
             namaDokterTxt.text = doctor.name
             spesialisTxt.text = doctor.specialty
             rumahSktTxt.text = doctor.hospital
         }
+        for medicine in medicineArray {
+            dataHarga.append(medicine.name!)
+            filteredData = dataHarga
+        }
         
+        hargaObatTableView.delegate = self
+        hargaObatTableView.dataSource = self
+        listObatSearchBar.delegate = self
         prescriptionTableView.delegate = self
         prescriptionTableView.dataSource = self
         self.namaPasienTxt.delegate = self
         self.dateTxtField.delegate = self
-        
-        dataPrescription.append(contentsOf: data1)
 
         namaPasienTxt.textAlignment = .center
     }
@@ -94,20 +103,22 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
         dateTxtField.text = formatter.string(from: datePicker.date)
         self.view.endEditing(true)
     }
-    
+    //mark: for large title in navigation bar
     func setupNavBar() {
         navigationController?.navigationBar.prefersLargeTitles = true
-//        navigationItem.largeTitleDisplayMode = .always
+        navigationItem.largeTitleDisplayMode = .always
     }
-    
     
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
     
+    // mark: config for each table view
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         var numberOfRow = 1
         switch tableView {
+        case hargaObatTableView:
+            numberOfRow = filteredData.count
         case prescriptionTableView:
             numberOfRow = dataPrescription.count
         default:
@@ -119,6 +130,9 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         var cell = UITableViewCell()
         switch tableView {
+        case hargaObatTableView:
+            cell = tableView.dequeueReusableCell(withIdentifier: "hargaObat", for: indexPath)
+            cell.textLabel?.text = filteredData[indexPath.row]
         case prescriptionTableView:
             cell = tableView.dequeueReusableCell(withIdentifier: "prescriptionObat", for: indexPath)
             cell.textLabel?.text = dataPrescription[indexPath.row]
@@ -128,7 +142,23 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
         return cell
     }
     
-    
+    // MARK: search bar config
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        
+        filteredData = []
+        if searchText == "" {
+            filteredData = dataHarga
+        }
+        else {
+            for testData in dataHarga {
+                if testData.lowercased().contains(searchText.lowercased()) {
+                    
+                    filteredData.append(testData)
+                }
+            }
+        }
+        self.hargaObatTableView.reloadData()
+    }
     
     // for hide keyboard by touch view
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -150,11 +180,21 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
             print("Error fetching data from context \(error)")
         }
     }
-    
+    //Load Medicine list
+    func loadMedicine() {
+        let request: NSFetchRequest<Medicines> = Medicines.fetchRequest()
+        do {
+            medicineArray = try context.fetch(request)
+        }
+        catch {
+            print("Error fetching data from context \(error)")
+        }
+    }
+
     @IBAction func btnKonfirmasi(_ sender: Any) {
         self.dataPasien = namaPasienTxt.text!
         
-        //formatter
+        //formatter for date picker
         formatter.dateFormat = "yyyy"
         dateTxtField.text = formatter.string(from: datePicker.date)
         guard let birthYear = dateTxtField.text else { return }
@@ -171,10 +211,6 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
             let vc = segue.destination as! PrescriptionScreen
             vc.namaPasien = self.namaPasienTxt.text!
             vc.umurPasien = self.umurPasien
-//        } else {
-//            let vc = segue.destination as! ListObatViewController
         }
-        
     }
-    
 }
