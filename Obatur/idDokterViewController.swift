@@ -43,7 +43,7 @@ class idDokterViewController: UIViewController, UITextFieldDelegate {
     
     // MARK = set identitas dokter ke ListObatViewController.swift
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let vc = segue.destination as! ListObatViewController
+        let vc = segue.destination as! MainViewController
         vc.dokter = self.namaDokterTxtField.text!
         vc.spesialis = self.spesialTxtField.text!
         vc.rumahSakit = self.rsTxtField.text!

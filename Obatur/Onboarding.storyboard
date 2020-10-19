@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BfG-Lr-xWV">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BfG-Lr-xWV">
     <device id="ipad11_0rounded" orientation="landscape" layout="fullscreen" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -32,7 +34,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Obat pas, Pasien puas" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2BX-bq-srs">
-                                <rect key="frame" x="942" y="100" width="170.5" height="20.5"/>
+                                <rect key="frame" x="942" y="100" width="169.5" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -41,7 +43,7 @@
                                 <rect key="frame" x="783" y="207" width="396" height="501"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Identitas Dokter" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1si-gI-djc">
-                                        <rect key="frame" x="108" y="37" width="180.5" height="29"/>
+                                        <rect key="frame" x="108.5" y="37" width="179.5" height="29"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -83,7 +85,7 @@
                                         </connections>
                                     </button>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstItem="1si-gI-djc" firstAttribute="top" secondItem="w4A-JS-mvX" secondAttribute="top" constant="37" id="6p7-OE-DMa"/>
                                     <constraint firstItem="hRX-83-hnU" firstAttribute="leading" secondItem="w4A-JS-mvX" secondAttribute="leading" constant="38" id="7gW-1D-tKr"/>
@@ -100,6 +102,7 @@
                                 </constraints>
                             </view>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="fVX-uD-QhL"/>
                         <color key="backgroundColor" red="0.84707027670000001" green="0.84703820939999996" blue="0.84705996510000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="4cE-Br-ezG" secondAttribute="bottom" id="0d0-Up-B1y"/>
@@ -116,7 +119,6 @@
                             <constraint firstItem="2BX-bq-srs" firstAttribute="leading" secondItem="Xhq-ON-YgV" secondAttribute="trailing" constant="27" id="nli-Oh-4bY"/>
                             <constraint firstItem="fVX-uD-QhL" firstAttribute="trailing" secondItem="4cE-Br-ezG" secondAttribute="trailing" constant="426" id="uCj-iz-8wS"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="fVX-uD-QhL"/>
                     </view>
                     <connections>
                         <outlet property="btnConfirm" destination="4Zz-JU-BZB" id="5d1-UZ-dR8"/>
@@ -130,10 +132,10 @@
             </objects>
             <point key="canvasLocation" x="679.8994974874372" y="154.67625899280577"/>
         </scene>
-        <!--ListObatViewController-->
+        <!--MainViewController-->
         <scene sceneID="L05-T5-Lpa">
             <objects>
-                <viewControllerPlaceholder storyboardName="Main" referencedIdentifier="ListObatViewController" id="rGp-df-h0t" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardName="Main" referencedIdentifier="MainViewController" id="rGp-df-h0t" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="B8b-h1-IkV"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XUY-Gq-GSm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -146,5 +148,8 @@
         <image name="LogBut" width="202" height="72"/>
         <image name="LogButTapped" width="202" height="72"/>
         <image name="Logo" width="118" height="118"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
     </resources>
 </document>
