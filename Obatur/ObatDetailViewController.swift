@@ -19,14 +19,16 @@ class ObatDetailViewController: UIViewController {
     @IBOutlet weak var txtKomposisiObat: UILabel!
     
     var namaObat = ""
-    var kategori = ""
+    var catatan = ""
+    var aturan = ""
+    var hari = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         customLayer()
         
-        txtKomposisiObat?.text = "\(kategori) (\(namaObat), )"
+        txtKomposisiObat?.text = "\(namaObat)"
         
     }
         
@@ -87,7 +89,58 @@ class ObatDetailViewController: UIViewController {
         return (true)
     }
     
+    func pressed() {
+        let button = UIButton()
+        if (button.isSelected) {
+                print(" Not Selected");
+            } else {
+                print(" Selected");
+            }
+    }
     
+    @IBAction func aturan1x1Btn(_ sender: Any) {
+        pressed()
+        aturan = "1x1"
+    }
+    
+    @IBAction func aturan2x1Btn(_ sender: Any) {
+        pressed()
+        aturan = "2x1"
+    }
+    
+    @IBAction func aturan3x1Btn(_ sender: Any) {
+        pressed()
+        aturan = "3x1"
+    }
+    
+    @IBAction func hari3Btn(_ sender: Any) {
+        pressed()
+        hari = "3 hari"
+    }
+    
+    @IBAction func hari5Btn(_ sender: Any) {
+        pressed()
+        hari = "5 hari"
+    }
+    @IBAction func hari7Btn(_ sender: Any) {
+        pressed()
+        hari = "7 Hari"
+    }
+    
+        override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "savedDetailObat" {
+            let vc = segue.destination as! MainViewController
+            vc.obat = self.namaObat
+            vc.aturan = self.aturan
+            vc.hari = self.hari
+//        } else if segue.identifier == "detailObat" {
+//            if let indexPath = hargaObatTableView.indexPathForSelectedRow {
+//                let selectedRow = indexPath.row
+//                let vc = segue.destination as! ObatDetailViewController
+//                vc.namaObat = self.filteredData[selectedRow]
+//            }
+        }
+    }
 }
 
 

@@ -35,7 +35,15 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
     var namaObat = [String]()
     var hargaObat = [Int64]()
     var filteredData = [String]()
+    
+    //MARK: semua data untuk prescription
+    var obat = ""
+    var aturan = ""
+    var catatan = ""
+    var hari = ""
+    var harga = ""
     var dataPrescription = [String]()
+    var allData = [String]()
 
     
     let datePicker = UIDatePicker()
@@ -83,6 +91,10 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
         btnOutlet.layer.shadowOffset = CGSize(width: 0, height: 0)
         btnOutlet.layer.shadowOpacity = 0.3
         btnOutlet.layer.shadowRadius = 4.0
+        
+        //MARK: load utk data prescription
+        allData = ["\(obat) \(aturan) \(hari)"]
+        dataPrescription.append(contentsOf: allData)
     }
     
     // mark: for date picker
@@ -130,7 +142,7 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
         case prescriptionTableView:
             numberOfRow = dataPrescription.count
         default:
-            print("somethings wrong !!")
+            print("numberOfRowsInSection wrong !!")
         }
         return numberOfRow
     }
@@ -146,7 +158,7 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
             cell = tableView.dequeueReusableCell(withIdentifier: "prescriptionObat", for: indexPath)
             cell.textLabel?.text = dataPrescription[indexPath.row]
         default:
-            print("Somethings wrong !!")
+            print("cellForRowAt wrong !!")
         }
         return cell
     }
@@ -186,7 +198,7 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
             doctorArray = try context.fetch(request)
         }
         catch {
-            print("Error fetching data from context \(error)")
+            print("Error fetching data doctor from context \(error)")
         }
     }
     //Load Medicine list
@@ -196,7 +208,7 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
             medicineDictionary = try context.fetch(request)
         }
         catch {
-            print("Error fetching data from context \(error)")
+            print("Error fetching data medicine from context \(error)")
         }
     }
 
