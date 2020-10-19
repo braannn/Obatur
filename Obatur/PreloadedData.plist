@@ -2,10 +2,71 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <array>
-	<string>fentanil</string>
-	<string>kodein</string>
-	<string>morfin HCl</string>
-	<string>petidin</string>
-	<string>sufentanil</string>
+	<dict>
+		<key>name</key>
+		<string>fentanil</string>
+		<key>price</key>
+		<integer>10000</integer>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>kodein</string>
+		<key>price</key>
+		<integer>23000</integer>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>morfin HCl</string>
+		<key>price</key>
+		<integer>13000</integer>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>petidin</string>
+		<key>price</key>
+		<integer>12000</integer>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>sufentanil</string>
+		<key>price</key>
+		<integer>24000</integer>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>asam mefenamat</string>
+		<key>price</key>
+		<integer>40000</integer>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>ibuprofen</string>
+		<key>price</key>
+		<integer>8000</integer>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>ketoprofen</string>
+		<key>price</key>
+		<integer>16000</integer>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>ketorolak</string>
+		<key>price</key>
+		<integer>29000</integer>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>natrium diklofenak</string>
+		<key>price</key>
+		<integer>45000</integer>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>parasetamol</string>
+		<key>price</key>
+		<integer>5000</integer>
+	</dict>
 </array>
 </plist>

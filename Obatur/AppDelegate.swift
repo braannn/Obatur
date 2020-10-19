@@ -46,11 +46,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             persistentContainer.viewContext.automaticallyMergesChangesFromParent = true
             
             backgroundContext.perform {
-                if let arrayContents = NSArray(contentsOf: urlPath) as? [String] {
+                if let dictionaryContents = NSArray(contentsOf: urlPath) as? [Dictionary<String, Any>] {
                     do {
-                        for medicineName in arrayContents {
+                        for medicine in dictionaryContents {
                             let medicineObject = Medicines(context: backgroundContext)
-                            medicineObject.name = medicineName
+                            medicineObject.name = medicine["name"] as? String
+                            medicineObject.price = medicine["price"] as? Int64 ?? 0
                         }
                         try backgroundContext.save()
                         userDefaults.set(true, forKey: preloadedDataKey)

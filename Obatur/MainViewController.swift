@@ -23,7 +23,7 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     
     var doctorArray = [Doctors]()
-    var medicineArray = [Medicines]()
+    var medicineDictionary = [Medicines]()
     
     var dokter: String = ""
     var spesialis: String = ""
@@ -31,8 +31,9 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
     var dataPasien = ""
     var umurPasien = ""
     
-    var dataHarga : [String] = []
-    var filteredData: [String]!
+    var namaObat = [String]()
+    var hargaObat = [Int64]()
+    var filteredData = [String]()
     var dataPrescription = [String]()
 
     
@@ -56,9 +57,11 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
             spesialisTxt.text = doctor.specialty
             rumahSktTxt.text = doctor.hospital
         }
-        for medicine in medicineArray {
-            dataHarga.append(medicine.name!)
-            filteredData = dataHarga
+        
+        for medicine in medicineDictionary {
+            namaObat.append(medicine.name!)
+            filteredData = namaObat
+            hargaObat.append(medicine.price)
         }
         
         hargaObatTableView.delegate = self
@@ -133,11 +136,12 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
         case hargaObatTableView:
             cell = tableView.dequeueReusableCell(withIdentifier: "hargaObat", for: indexPath)
             cell.textLabel?.text = filteredData[indexPath.row]
+            cell.detailTextLabel?.text = String(hargaObat[indexPath.row])
         case prescriptionTableView:
             cell = tableView.dequeueReusableCell(withIdentifier: "prescriptionObat", for: indexPath)
             cell.textLabel?.text = dataPrescription[indexPath.row]
         default:
-            print("somethings wrong !!")
+            print("Somethings wrong !!")
         }
         return cell
     }
@@ -147,10 +151,10 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
         
         filteredData = []
         if searchText == "" {
-            filteredData = dataHarga
+            filteredData = namaObat
         }
         else {
-            for testData in dataHarga {
+            for testData in namaObat {
                 if testData.lowercased().contains(searchText.lowercased()) {
                     
                     filteredData.append(testData)
@@ -184,7 +188,7 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
     func loadMedicine() {
         let request: NSFetchRequest<Medicines> = Medicines.fetchRequest()
         do {
-            medicineArray = try context.fetch(request)
+            medicineDictionary = try context.fetch(request)
         }
         catch {
             print("Error fetching data from context \(error)")
