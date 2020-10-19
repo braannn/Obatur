@@ -15,6 +15,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        preloadData()
         return true
     }
 
@@ -32,6 +33,37 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Use this method to release any resources that were specific to the discarded scenes, as they will not return.
     }
 
+    private func preloadData() {
+        let preloadedDataKey = "didPreloadData"
+        let userDefaults = UserDefaults.standard
+        
+        if userDefaults.bool(forKey: preloadedDataKey) == false {
+            guard let urlPath = Bundle.main.url(forResource: "PreloadedData", withExtension: "plist") else {
+                return
+            }
+            
+            let backgroundContext = persistentContainer.newBackgroundContext()
+            persistentContainer.viewContext.automaticallyMergesChangesFromParent = true
+            
+            backgroundContext.perform {
+                if let arrayContents = NSArray(contentsOf: urlPath) as? [String] {
+                    do {
+                        for medicineName in arrayContents {
+                            let medicineObject = Medicines(context: backgroundContext)
+                            medicineObject.name = medicineName
+                        }
+                        try backgroundContext.save()
+                        userDefaults.set(true, forKey: preloadedDataKey)
+                    }
+                    catch {
+                        print(error.localizedDescription)
+                    }
+                }
+            }
+            
+        }
+    }
+    
     // MARK: - Core Data stack
 
     lazy var persistentContainer: NSPersistentCloudKitContainer = {

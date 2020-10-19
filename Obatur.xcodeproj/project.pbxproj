@@ -20,6 +20,7 @@
 		91E911A325304ABF00124C0E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 91E911A125304ABF00124C0E /* LaunchScreen.storyboard */; };
 		91E911AE25304ABF00124C0E /* ObaturTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91E911AD25304ABF00124C0E /* ObaturTests.swift */; };
 		91E911B925304ABF00124C0E /* ObaturUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91E911B825304ABF00124C0E /* ObaturUITests.swift */; };
+		962EB5DA253CA41A00608D10 /* PreloadedData.plist in Resources */ = {isa = PBXBuildFile; fileRef = 962EB5D9253CA41A00608D10 /* PreloadedData.plist */; };
 		96D3D0322533E4EB00435D7D /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96D3D0312533E4EB00435D7D /* NavigationController.swift */; };
 /* End PBXBuildFile section */
 
@@ -60,6 +61,7 @@
 		91E911B425304ABF00124C0E /* ObaturUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ObaturUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		91E911B825304ABF00124C0E /* ObaturUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObaturUITests.swift; sourceTree = "<group>"; };
 		91E911BA25304ABF00124C0E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		962EB5D9253CA41A00608D10 /* PreloadedData.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = PreloadedData.plist; sourceTree = "<group>"; };
 		96D3D0312533E4EB00435D7D /* NavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -117,6 +119,7 @@
 				9110F8E625383D5A00CE7209 /* Onboarding.storyboard */,
 				9110F8D62535E52700CE7209 /* ListObatViewController.swift */,
 				96D3D0312533E4EB00435D7D /* NavigationController.swift */,
+				962EB5D9253CA41A00608D10 /* PreloadedData.plist */,
 				9110F8DE253835EA00CE7209 /* idDokterViewController.swift */,
 				9183A889253B867C0032BF50 /* PrescriptionScreen.swift */,
 				91E9119F25304ABF00124C0E /* Assets.xcassets */,
@@ -251,6 +254,7 @@
 			files = (
 				91E911A325304ABF00124C0E /* LaunchScreen.storyboard in Resources */,
 				91E911A025304ABF00124C0E /* Assets.xcassets in Resources */,
+				962EB5DA253CA41A00608D10 /* PreloadedData.plist in Resources */,
 				91E9119B25304ABE00124C0E /* Main.storyboard in Resources */,
 				9110F8E725383D5A00CE7209 /* Onboarding.storyboard in Resources */,
 			);

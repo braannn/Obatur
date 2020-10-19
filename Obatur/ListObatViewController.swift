@@ -23,6 +23,7 @@ class ListObatViewController: UIViewController, UITableViewDelegate, UITableView
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     
     var doctorArray = [Doctors]()
+    var medicineArray = [Medicines]()
     
     var dokter: String = ""
     var spesialis: String = ""
@@ -43,12 +44,17 @@ class ListObatViewController: UIViewController, UITableViewDelegate, UITableView
         setupNavBar()
         createDatePicker()
         loadDoctor()
+        loadMedicine()
         
         for doctor in doctorArray {
             namaDokterTxt.text = doctor.name
             spesialisTxt.text = doctor.specialty
             rumahSktTxt.text = doctor.hospital
-            
+        }
+        
+        for medicine in medicineArray {
+            dataHarga.append(medicine.name!)
+            filteredData = dataHarga
         }
         
         hargaObatTableView.delegate = self
@@ -60,10 +66,10 @@ class ListObatViewController: UIViewController, UITableViewDelegate, UITableView
         self.dateTxtField.delegate = self
         
         
-        for index in 0...20 {
-            dataHarga.append("data harga obat \(index)")
-            filteredData = dataHarga
-        }
+//        for index in 0...20 {
+//            dataHarga.append("data harga obat \(index)")
+//            filteredData = dataHarga
+//        }
         dataPrescription.append(contentsOf: data1)
 
     }
@@ -174,6 +180,16 @@ class ListObatViewController: UIViewController, UITableViewDelegate, UITableView
         let request: NSFetchRequest<Doctors> = Doctors.fetchRequest()
         do {
             doctorArray = try context.fetch(request)
+        }
+        catch {
+            print("Error fetching data from context \(error)")
+        }
+    }
+    
+    func loadMedicine() {
+        let request: NSFetchRequest<Medicines> = Medicines.fetchRequest()
+        do {
+            medicineArray = try context.fetch(request)
         }
         catch {
             print("Error fetching data from context \(error)")
