@@ -18,6 +18,7 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
     @IBOutlet weak var namaPasienTxt: UITextField!
     @IBOutlet weak var hargaObatTableView: UITableView!
     @IBOutlet weak var listObatSearchBar: UISearchBar!
+    @IBOutlet weak var btnOutlet: UIButton!
     
     //Reference to managed object context
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
@@ -70,6 +71,15 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
         self.dateTxtField.delegate = self
 
         namaPasienTxt.textAlignment = .center
+        
+        // custom button
+        // corner radius
+        btnOutlet.layer.cornerRadius = 10
+        // shadow
+        btnOutlet.layer.shadowColor = UIColor.black.cgColor
+        btnOutlet.layer.shadowOffset = CGSize(width: 0, height: 0)
+        btnOutlet.layer.shadowOpacity = 0.3
+        btnOutlet.layer.shadowRadius = 4.0
     }
     
     // mark: for date picker
