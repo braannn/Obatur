@@ -18,8 +18,8 @@ class ObatDetailViewController: UIViewController {
     @IBOutlet weak var btnHari3: UIButton!
     @IBOutlet weak var txtKomposisiObat: UILabel!
     
-    var kategori = ""
     var namaObat = ""
+    var kategori = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -86,6 +86,8 @@ class ObatDetailViewController: UIViewController {
         textView.resignFirstResponder()
         return (true)
     }
+    
+    
 }
 
 

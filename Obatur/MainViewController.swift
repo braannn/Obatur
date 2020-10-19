@@ -48,7 +48,7 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupNavBar()
+ 
         createDatePicker()
         loadDoctor()
         loadMedicine()
@@ -115,11 +115,6 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
         formatter.dateStyle = .medium
         dateTxtField.text = formatter.string(from: datePicker.date)
         self.view.endEditing(true)
-    }
-    //mark: for large title in navigation bar
-    func setupNavBar() {
-        navigationController?.navigationBar.prefersLargeTitles = true
-        navigationItem.largeTitleDisplayMode = .always
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -225,6 +220,12 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
             let vc = segue.destination as! PrescriptionScreen
             vc.namaPasien = self.namaPasienTxt.text!
             vc.umurPasien = self.umurPasien
+        } else if segue.identifier == "detailObat" {
+            if let indexPath = hargaObatTableView.indexPathForSelectedRow {
+                let selectedRow = indexPath.row
+                let vc = segue.destination as! ObatDetailViewController
+                vc.namaObat = self.filteredData[selectedRow]
+            }
         }
     }
 }
