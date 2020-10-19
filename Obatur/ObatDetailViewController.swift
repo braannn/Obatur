@@ -9,6 +9,7 @@ import UIKit
 
 class ObatDetailViewController: UIViewController {
     
+    @IBOutlet weak var popoverView: UIView!
     @IBOutlet weak var btnAturan1: UIButton!
     @IBOutlet weak var btnAturan2: UIButton!
     @IBOutlet weak var btnAturan3: UIButton!
@@ -23,13 +24,15 @@ class ObatDetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        customButton()
+        customLayer()
         
         txtKomposisiObat?.text = "\(kategori) (\(namaObat), )"
         
     }
         
-    func customButton() {
+    func customLayer() {
+        
+        popoverView.layer.cornerRadius = 15
         
         btnHari3.setTitle("7 hari", for: .normal)
         btnHari3.layer.cornerRadius = 10
@@ -72,6 +75,16 @@ class ObatDetailViewController: UIViewController {
         btnAturan3.layer.shadowOffset = CGSize(width: 0, height: 0)
         btnAturan3.layer.shadowOpacity = 0.3
         btnAturan3.layer.shadowRadius = 2.0
+    }
+    
+    // for hide keyboard by touch view
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
+    // for hide keyboard by return
+    private func textViewShouldReturn(_ textView: UITextView) -> Bool {
+        textView.resignFirstResponder()
+        return (true)
     }
 }
 

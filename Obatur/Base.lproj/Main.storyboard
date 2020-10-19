@@ -289,32 +289,32 @@
                                 <color key="backgroundColor" red="0.93739813569999997" green="0.93689405920000002" blue="0.95686668159999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="vFP-VK-9f7">
-                                        <rect key="frame" x="0.0" y="28" width="882" height="42"/>
+                                        <rect key="frame" x="0.0" y="28" width="882" height="42.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="vFP-VK-9f7" id="4pd-MK-nOY">
-                                            <rect key="frame" x="0.0" y="0.0" width="882" height="42"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="882" height="42.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Obat" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YEh-z3-LY6">
-                                                    <rect key="frame" x="0.0" y="10" width="42.5" height="22"/>
+                                                    <rect key="frame" x="0.0" y="10" width="42.5" height="22.5"/>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="brp kali 1 hari?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hmM-3H-z2G">
-                                                    <rect key="frame" x="267" y="10" width="123.5" height="22"/>
+                                                    <rect key="frame" x="267" y="10" width="123.5" height="22.5"/>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="brp kali 1 hari?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NeD-cd-5p4">
-                                                    <rect key="frame" x="469" y="10" width="123.5" height="22"/>
+                                                    <rect key="frame" x="469" y="10" width="123.5" height="22.5"/>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Kapan di konsumsi" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KDC-6m-QTl">
-                                                    <rect key="frame" x="655" y="10" width="161" height="22"/>
+                                                    <rect key="frame" x="655" y="10" width="161" height="22.5"/>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -559,6 +559,7 @@
                         <outlet property="btnHari1" destination="yyy-Wf-nnV" id="nhN-Oz-Gh7"/>
                         <outlet property="btnHari2" destination="vvl-XO-S05" id="Ce5-xx-gM5"/>
                         <outlet property="btnHari3" destination="6le-ew-GM7" id="erN-5v-SZT"/>
+                        <outlet property="popoverView" destination="vhp-pd-2Kv" id="f1P-hd-IHe"/>
                         <outlet property="txtKomposisiObat" destination="SAS-od-B1c" id="TMY-GI-QYo"/>
                     </connections>
                 </viewController>
